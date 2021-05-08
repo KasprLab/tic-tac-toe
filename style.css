@@ -1,0 +1,22 @@
+.app-title{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.app{
+  /* padding-top: 100px; */
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  gap: 3px ;
+}
+
+.grid{
+  display: flex;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+}
+
