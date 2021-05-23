@@ -11,23 +11,23 @@ html {
 .app-title {
   font-size: 5rem;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 3.2rem;
+  margin-bottom: 1.9rem;
 }
 
 .app {
   /* padding-top: 100px; */
   justify-content: center;
   display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: 200px 200px 200px;
-  gap: 3px;
+  grid-template-columns: 15rem 15rem 15rem;
+  grid-template-rows: 15rem 15rem 15rem;
+  gap: 1rem;
 }
 
 .grid {
   display: flex;
-  border-style: solid;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 1.25rem;
+  background-color: rgb(57, 218, 111);
 }
