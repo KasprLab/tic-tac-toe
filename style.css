@@ -1,22 +1,33 @@
-.app-title{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.app-title {
+  font-size: 5rem;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
 }
 
-.app{
+.app {
   /* padding-top: 100px; */
   justify-content: center;
   display: grid;
   grid-template-columns: 200px 200px 200px;
   grid-template-rows: 200px 200px 200px;
-  gap: 3px ;
+  gap: 3px;
 }
 
-.grid{
+.grid {
   display: flex;
   border-style: solid;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
 }
-
