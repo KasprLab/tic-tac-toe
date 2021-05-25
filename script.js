@@ -21,8 +21,7 @@ const readGrid = function () {
     .map(el => el.textContent)
 
   let xtotal = [] // array of x in the grid
-  let ytotal = [] // array if y in the grid
-
+  let ytotal = [] // array of y in the grid
 
   gridsArr.forEach(function (el, i) {
     if (el === 'x') {
@@ -55,7 +54,11 @@ const init = function () {
 
 // Reset grid value to empty
 const resetGrid = function () {
-  Array.from(document.querySelectorAll('.grid')).forEach(el => el.textContent = "")
+
+  Array.from(document.querySelectorAll('.grid')).forEach(el => {
+    el.textContent = ""
+    el.classList.remove('yellow', 'red')
+  })
 }
 
 // start the game
@@ -69,14 +72,17 @@ const runGame = function () {
       if (gameState === true) {
         if (currentPlayer === 'x' && e.target.innerText === '') {
           e.target.innerText = 'x'
+          grid.classList.add('yellow')
           currentPlayer = 'y'
         } else if (currentPlayer === 'y' && e.target.innerText === '') {
           e.target.innerText = 'y'
+          grid.classList.add('red')
           currentPlayer = 'x'
         }
 
         readGrid()
       }
+
     })
 
   })

@@ -29,5 +29,23 @@ html {
   justify-content: center;
   align-items: center;
   border-radius: 1.25rem;
-  background-color: rgb(57, 218, 111);
+  background-color: rgb(57, 218, 175);
+}
+
+.grid:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.grid:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.yellow {
+  background-color: rgb(245, 225, 0);
+}
+
+.red {
+  background-color: rgb(205, 4, 4);
 }
