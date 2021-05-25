@@ -32,11 +32,19 @@ const readGrid = function () {
 
   // can I refactor this to a function
   winCombo.forEach(win => {
+    
     if (win.every(elm => xtotal.includes(elm))) {
       console.log(win)
       console.log(`x is the winner`)
       gameState = false
-    }
+    } 
+
+    if (win.every(elm => ytotal.includes(elm))) {
+      console.log(win)
+      console.log(`y is the winner`)
+      gameState = false
+
+    } 
 
   })
 
