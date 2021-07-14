@@ -15,12 +15,12 @@ html {
   margin-bottom: 1.9rem;
 }
 
-.app {
+.container {
   /* padding-top: 100px; */
   justify-content: center;
   display: grid;
   grid-template-columns: 15rem 15rem 15rem;
-  grid-template-rows: 15rem 15rem 15rem;
+  grid-template-rows: 15rem 15rem 15rem auto;
   gap: 1rem;
 }
 
@@ -30,7 +30,18 @@ html {
   align-items: center;
   border-radius: 1.25rem;
   background-color: rgb(57, 218, 175);
+  z-index: 1;
 }
+
+/* .cover {
+  background-color: blueviolet;
+  height: 50px;
+  width: 50px;
+  top: -50px;
+  grid-area: 1 / 1 / span 3 / span 3;
+  z-index: 2;
+  opacity: 0.2;
+} */
 
 .grid:hover {
   transform: translateY(-0.5rem);
