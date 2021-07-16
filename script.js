@@ -1,19 +1,9 @@
 'use strict'
 
 let currentPlayer
-let gameState
-const winCombo = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 6], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]] // winning combination
-
-// reading the grids
-// turning set of grids into a array
-// get grid from dom and map it into array of grid values. 
 
 const btnNewGame = document.querySelector('.button-new-game')
-const grids = document.querySelectorAll('.grid')
 
-// Functions ======================
-
-// read the grid (it kind a need to be an array)
 const readGrid = function () {
 
   let gridsArr = Array
@@ -30,30 +20,52 @@ const readGrid = function () {
       ytotal.push(i + 1)
   })
 
-  // can I refactor this to a function
-  winCombo.forEach(win => {
+  findWinner(xtotal, ytotal)
+
+}
+
+// find winner
+const findWinner = function (arrX, arrY){
+
+  const winCombos = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]] // winning combination
+  const allGridsSelected = arrX.concat(arrY).length === 9
+  let xWin
+  let yWin
+  const tie = allGridsSelected && !xWin && !yWin
+
+  winCombos.forEach(winCombo => {
     
-    if (win.every(elm => xtotal.includes(elm))) {
-      console.log(win)
+    xWin = winCombo.every(elm => arrX.includes(elm))
+    yWin = winCombo.every(elm => arrY.includes(elm))
+   
+    if (xWin) {
       console.log(`x is the winner`)
-      gameState = false
+      document.querySelector('.cover').classList.add('cover--active')
+      document.querySelector('.cover').textContent = 'Player X win'
+     // gameState = false
     } 
-
-    if (win.every(elm => ytotal.includes(elm))) {
-      console.log(win)
+    
+    if (yWin) {
       console.log(`y is the winner`)
-      gameState = false
-
+      document.querySelector('.cover').classList.add('cover--active')
+     // gameState = false
     } 
 
   })
+
+  if (tie){
+    document.querySelector('.cover').classList.add('cover--active')
+    console.log('tie')
+  }
+
+
 
 }
 
 // reset app to default mode
 const init = function () {
 
-  gameState = true
+  // gameState = true
   currentPlayer = 'x' // set currentPlayer to x
   resetGrid() // reset grid value to empty
   runGame()
@@ -67,17 +79,21 @@ const resetGrid = function () {
     el.textContent = ""
     el.classList.remove('yellow', 'red')
   })
+
+  document.querySelector('.cover').classList.remove('cover--active')
+
 }
 
 // start the game
 const runGame = function () {
 
-  grids.forEach(function (grid) {
+  const grids = document.querySelectorAll('.grid')
 
+  grids.forEach(function (grid) {
 
     grid.addEventListener('click', function (e) {
 
-      if (gameState === true) {
+ //     if (gameState === true) {
         if (currentPlayer === 'x' && e.target.innerText === '') {
           e.target.innerText = 'x'
           grid.classList.add('yellow')
@@ -89,7 +105,7 @@ const runGame = function () {
         }
 
         readGrid()
-      }
+//      }
 
     })
 
@@ -97,11 +113,8 @@ const runGame = function () {
 
 }
 
-// Event Listener ===================
-
 btnNewGame.addEventListener('click', function (e) {
 
-  console.log('new game')
   init()
 
 })
