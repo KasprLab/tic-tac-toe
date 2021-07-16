@@ -1,6 +1,6 @@
 # tic-tac-toe
 
-Background\s
+Background <br>
 The app was the first ever coding project that was given to me during my bootcamp. I remember finding this assignment quite challanging and end up coding along with other people work back then and tweek it to personalize the code. This time, I made it fully by myself from scratch (insert: proud)
 
 Tech stack:
