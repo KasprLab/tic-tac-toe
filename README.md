@@ -13,5 +13,5 @@ Tech stack:
 
 Project Journal
 
-Tuesday, 13/07/2021
+Tuesday, 13/07/2021 -
 After reviewing the app, I realized that I have not update Github with the latest version. I have made a list of a few things to do and will need to go through them
