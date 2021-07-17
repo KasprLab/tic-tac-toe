@@ -1,75 +1,66 @@
 'use strict'
 
 let currentPlayer
-
 const btnNewGame = document.querySelector('.button-new-game')
 
+// read grid
 const readGrid = function () {
 
   let gridsArr = Array
     .from(document.querySelectorAll('.grid'))
     .map(el => el.textContent)
 
-  let xtotal = [] // array of x in the grid
-  let ytotal = [] // array of y in the grid
+  let xTotal = [] // array of x in the grid
+  let oTotal = [] // array of y in the grid
 
   gridsArr.forEach(function (el, i) {
     if (el === 'x') {
-      xtotal.push(i + 1)
-    } else if (el === 'y')
-      ytotal.push(i + 1)
+      xTotal.push(i + 1)
+    } else if (el === 'o')
+      oTotal.push(i + 1)
   })
 
-  findWinner(xtotal, ytotal)
-
+  findWinner(xTotal, oTotal)
 }
 
 // find winner
-const findWinner = function (arrX, arrY){
+const findWinner = function (arrX, arrO) {
 
   const winCombos = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 4, 7], [2, 5, 8], [3, 6, 9], [1, 5, 9], [3, 5, 7]] // winning combination
-  const allGridsSelected = arrX.concat(arrY).length === 9
+  const allGridsSelected = arrX.concat(arrO).length === 9
   let xWin
-  let yWin
-  const tie = allGridsSelected && !xWin && !yWin
+  let oWin
 
   winCombos.forEach(winCombo => {
-    
+
     xWin = winCombo.every(elm => arrX.includes(elm))
-    yWin = winCombo.every(elm => arrY.includes(elm))
-   
+    oWin = winCombo.every(elm => arrO.includes(elm))
+
     if (xWin) {
-      console.log(`x is the winner`)
       document.querySelector('.cover').classList.add('cover--active')
       document.querySelector('.cover').textContent = 'Player X win'
-     // gameState = false
-    } 
-    
-    if (yWin) {
-      console.log(`y is the winner`)
-      document.querySelector('.cover').classList.add('cover--active')
-     // gameState = false
-    } 
+    }
 
+    if (oWin) {
+      document.querySelector('.cover').classList.add('cover--active')
+      document.querySelector('.cover').textContent = 'Player O win'
+    }
   })
 
-  if (tie){
+  const tie = allGridsSelected && !xWin && !oWin
+
+  if (tie) {
     document.querySelector('.cover').classList.add('cover--active')
-    console.log('tie')
+    document.querySelector('.cover').textContent = 'It\'s a Tie'
   }
-
-
-
 }
 
 // reset app to default mode
 const init = function () {
 
-  // gameState = true
   currentPlayer = 'x' // set currentPlayer to x
   resetGrid() // reset grid value to empty
   runGame()
-
 }
 
 // Reset grid value to empty
@@ -81,7 +72,6 @@ const resetGrid = function () {
   })
 
   document.querySelector('.cover').classList.remove('cover--active')
-
 }
 
 // start the game
@@ -93,30 +83,24 @@ const runGame = function () {
 
     grid.addEventListener('click', function (e) {
 
- //     if (gameState === true) {
-        if (currentPlayer === 'x' && e.target.innerText === '') {
-          e.target.innerText = 'x'
-          grid.classList.add('yellow')
-          currentPlayer = 'y'
-        } else if (currentPlayer === 'y' && e.target.innerText === '') {
-          e.target.innerText = 'y'
-          grid.classList.add('red')
-          currentPlayer = 'x'
-        }
+      if (currentPlayer === 'x' && e.target.innerText === '') {
+        e.target.innerText = 'x'
+        grid.classList.add('yellow')
+        currentPlayer = 'o'
+      } else if (currentPlayer === 'o' && e.target.innerText === '') {
+        e.target.innerText = 'o'
+        grid.classList.add('red')
+        currentPlayer = 'x'
+      }
 
-        readGrid()
-//      }
-
+      readGrid()
     })
-
   })
-
 }
 
 btnNewGame.addEventListener('click', function (e) {
 
   init()
-
 })
 
 init() // initialize the game 
