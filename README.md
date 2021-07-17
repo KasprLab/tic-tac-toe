@@ -18,17 +18,22 @@ Tech stack:
 
 **Friday, 16/07/2021** - I've updated the production version with codes from test app today. Finally I can go through the app and list areas need to be improve and features to be added.
 
-### Questions
+**Saturday, 17/07/2021**
+- Review and clean style.css
+- Review and clean style.css
+- Set outcome message and new game button
 
-- Why do I choose CSS Grid?
+**Sunday, 18/07/2021**
+
 
 ### Tasks List
 
-- Outcome messages
-- Reset button
-- Choose a google font
+- [x] Choose a google font
+- [ ] Style selection, outcome message and new game button
+- [ ] Add copyright
+- [ ] Deploy via surge
 
 ### Future Features
 
-- Animated fonts or shapes for selection entry and winning message
+- Animated fonts or shapes for selection entry and outcome message
 - Mobile focus design for iPhone X
