@@ -9,13 +9,12 @@ html {
 }
 
 .container {
-  margin-top: 10rem;
   display: grid;
+  margin-top: 10rem;
   grid-template-columns: 15rem 15rem 15rem;
   grid-template-rows: 15rem 15rem 15rem;
   grid-gap: 1rem;
   justify-content: center;
-  align-content: center;
 }
 
 .grid {
@@ -24,7 +23,7 @@ html {
   align-items: center;
   border-radius: 1.25rem;
   background-color: rgb(57, 218, 175);
-  z-index: 2;
+  z-index: 1;
 }
 
 .grid:hover {
@@ -87,18 +86,13 @@ html {
   background-color: white;
   opacity: 0.7;
   text-align: center;
-  padding: 40% 20%;
-  /* z-index: 1; */
+  padding-top: 20rem;
   color: blueviolet;
-  font-size: 20px;
+  font-size: 4rem;
 }
 
 .cover--active {
-  z-index: 3;
-}
-
-.btn--active {
-  z-index: 4;
+  z-index: 2;
 }
 
 .yellow {
