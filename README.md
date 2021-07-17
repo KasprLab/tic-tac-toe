@@ -1,4 +1,4 @@
-# tic-tac-toe
+# Tic-Tac-Toe
 
 ### Background
 
@@ -10,10 +10,25 @@ Tech stack:
 - CSS Grid
 - Javascript
 - DOM
-- Heroku
+- Surge
 
-Project Journal
+### Project Journal
 
-Tuesday, 13/07/2021 - After reviewing the app, I realized that I have not update Github with the latest version. I have made a list of a few things to do and will need to go through them
+**Tuesday, 13/07/2021** - After reviewing the app, I realized that I have not update Github with the latest version. I have made a list of a few things to do and will need to go through them.
 
-Friday, 16/07/2021 - I've updated the production version with codes from test app today. Finally I can go through the app and list areas need to be improve and features to be added.
+**Friday, 16/07/2021** - I've updated the production version with codes from test app today. Finally I can go through the app and list areas need to be improve and features to be added.
+
+### Questions
+
+- Why do I choose CSS Grid?
+
+### Tasks List
+
+- Outcome messages
+- Reset button
+- Choose a google font
+
+### Future Features
+
+- Animated fonts or shapes for selection entry and winning message
+- Mobile focus design for iPhone X
