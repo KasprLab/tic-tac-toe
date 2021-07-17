@@ -29,6 +29,7 @@ html {
 .grid:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .grid:active {
