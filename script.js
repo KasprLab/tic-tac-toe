@@ -38,12 +38,12 @@ const findWinner = function (arrX, arrO) {
 
     if (xWin) {
       document.querySelector('.cover').classList.add('cover--active')
-      document.querySelector('.cover').textContent = 'Player X win'
+      document.querySelector('.outcome-message').textContent = 'Player X win'
     }
 
     if (oWin) {
       document.querySelector('.cover').classList.add('cover--active')
-      document.querySelector('.cover').textContent = 'Player O win'
+      document.querySelector('.outcome-message').textContent = 'Player O win'
     }
   })
 
@@ -51,7 +51,7 @@ const findWinner = function (arrX, arrO) {
 
   if (tie) {
     document.querySelector('.cover').classList.add('cover--active')
-    document.querySelector('.cover').textContent = 'It\'s a Tie'
+    document.querySelector('.outcome-message').textContent = 'It\'s a Tie'
   }
 }
 
