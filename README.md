@@ -27,7 +27,7 @@ Tech stack:
 
 ### Tasks List
 
-- [x] Choose a google font
+[x] Choose a google font
 - [x] Style selection, outcome message and new game button
 - [ ] Deploy via surge
 - [ ] Add copyright
