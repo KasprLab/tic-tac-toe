@@ -2,14 +2,14 @@
 
 ### Background
 
-The app was the first ever coding project that was given to me during my bootcamp. I remember finding this assignment quite challanging and end up coding along with other people work back then and tweek it to personalize the code. This time, I made it fully by myself from scratch (insert: proud)
+The app was the first ever coding project that was given to me during my bootcamp. I remember finding this assignment challanging and end up geeting a copy from a source code then redo it myself. This time, I made it fully by myself from scratch :smile:
 
 Tech stack:
 
 - HTML
 - CSS Grid
 - Javascript
-- DOM
+- HTML DOM
 - Surge
 
 ### Project Journal
@@ -20,18 +20,18 @@ Tech stack:
 
 **Saturday, 17/07/2021**
 - Review and clean style.css
-- Review and clean style.css
 - Set outcome message and new game button
 
-**Sunday, 18/07/2021**
-
+**Sunday, 12/09/2021**
+- Update font style and outcome message
 
 ### Tasks List
 
 - [x] Choose a google font
-- [ ] Style selection, outcome message and new game button
-- [ ] Add copyright
+- [x ] Style selection, outcome message and new game button
 - [ ] Deploy via surge
+- [ ] Add copyright
+
 
 ### Future Features
 
