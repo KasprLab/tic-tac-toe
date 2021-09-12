@@ -38,12 +38,12 @@ const findWinner = function (arrX, arrO) {
 
     if (xWin) {
       document.querySelector('.cover').classList.add('cover--active')
-      document.querySelector('.outcome-message').textContent = 'Player X win'
+      document.querySelector('.outcome-message').textContent = 'Player X wins'
     }
 
     if (oWin) {
       document.querySelector('.cover').classList.add('cover--active')
-      document.querySelector('.outcome-message').textContent = 'Player O win'
+      document.querySelector('.outcome-message').textContent = 'Player O wins'
     }
   })
 
@@ -72,6 +72,7 @@ const resetGrid = function () {
   })
 
   document.querySelector('.cover').classList.remove('cover--active')
+  document.querySelector('.outcome-message').textContent = ''
 }
 
 // start the game
@@ -99,7 +100,6 @@ const runGame = function () {
 }
 
 btnNewGame.addEventListener('click', function (e) {
-
   init()
 })
 
